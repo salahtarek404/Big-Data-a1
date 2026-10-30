@@ -170,14 +170,3 @@ docker run -it --rm -p 8888:8888 -v "${PWD}/output:/home/jovyan/work/output" <yo
 
 ---
 
-## 🎓 Oral Discussion Quick Reference (Section 11)
-
-Every team member should master these questions for the evaluation session:
-
-- **Dockerfile ➔ Image ➔ Container:** A `Dockerfile` is a declarative build script. When built, it produces an immutable layered `Image`. When executed, the Docker engine runs an isolated `Container` process with a writable top layer.
-- **Image Layers:** Each command in a `Dockerfile` (`FROM`, `COPY`, `RUN`) generates a cached layer. Unchanged layers are reused across builds to accelerate compilation.
-- **Registry vs. Repository:** A *Registry* (e.g. Docker Hub) is a hosting service containing multiple *Repositories*. A *Repository* is a collection of related image tags (e.g. `bd-a1:latest`, `bd-a1:v1`).
-- **Bind Mount vs. Volume:** A *Bind Mount* maps an exact path on the host system to the container, allowing host access to files. A *Volume* is managed entirely by Docker within Docker's private storage area (`/var/lib/docker/volumes/`).
-- **Why Correlation $\neq$ Causation:** Correlation measures statistical linear dependence between two variables ($X$ and $Y$). It does not prove that $X$ causes $Y$, as confounders ($Z$) or reverse causality may explain the relationship.
-- **Why K-Means is Unsupervised:** K-Means does not use target labels ($y$) during training; it groups records strictly by minimizing within-cluster sum of squared Euclidean distances in the feature space.
-- **TF-IDF:** $\text{TF-IDF}(t, d, D) = \text{TF}(t, d) \times \text{IDF}(t, D)$. It boosts terms that are frequent in a specific document but rare across the entire corpus, penalizing ubiquitously common words.
