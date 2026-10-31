@@ -1,0 +1,29 @@
+===================================================
+SUPERVISED MODEL EVALUATION METRICS (CSCI461 A1)
+===================================================
+Model 1: Multinomial Naive Bayes
+  Accuracy : 0.9698
+  Precision: 0.9708
+  Recall   : 0.9698
+  F1-Score : 0.9680
+
+Confusion Matrix:
+[[1130    0]
+ [  39  124]]
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+         Ham       0.97      1.00      0.98      1130
+        Spam       1.00      0.76      0.86       163
+
+    accuracy                           0.97      1293
+   macro avg       0.98      0.88      0.92      1293
+weighted avg       0.97      0.97      0.97      1293
+---------------------------------------------------
+Bonus - Model 2: Logistic Regression
+  Accuracy : 0.9629
+  Precision: 0.9630
+  Recall   : 0.9629
+  F1-Score : 0.9606
+===================================================
