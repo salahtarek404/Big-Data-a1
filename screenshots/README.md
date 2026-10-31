@@ -1,12 +1,12 @@
 # Screenshots Checklist for Assignment Submission (Section 3.4)
 
-Save the following screenshots here as required by the assignment rubric:
+All required screenshots proving container lifecycle and cross-machine verification:
 
-1. `docker_build.png`: Screenshot showing the successful completion of `docker build -t bd-a1:latest .`.
-2. `docker_images.png`: Screenshot showing the output of `docker images` confirming `bd-a1` and base image exist.
-3. `docker_ps.png`: Screenshot showing `docker ps` with the running container and port mapping `0.0.0.0:8888->8888/tcp`.
-4. `docker_ps_a.png`: Screenshot showing `docker ps -a` listing recent containers.
-5. `docker_logs.png`: Screenshot showing `docker logs bd-a1-container` with Jupyter URL and token.
-6. `docker_inspect.png`: Screenshot of `docker inspect bd-a1-container` highlighting the bind mount configuration.
-7. `jupyter_notebook_running.png`: Screenshot of the browser running `analysis.ipynb` inside JupyterLab.
-8. `docker_hub_push.png`: Screenshot from Docker Hub web interface or CLI proving the image was pushed.
+1. docker_build.png: Successful execution of docker build -t bd-a1:latest .
+2. docker_images.png: Output of docker images showing bd-a1:latest and base image.
+3. docker_ps.png: Output of docker ps showing running container and port mapping.
+4. docker_ps_a.png: Output of docker ps -a listing active and past containers.
+5. docker_logs.png: Output of docker logs bd-a1-container showing JupyterLab startup.
+6. docker_inspect.png: Output of docker inspect bd-a1-container showing bind mount.
+7. jupyter_running.png: Browser view of JupyterLab running analysis.ipynb with workspace.
+8. docker_hub_push.png: Successful push of the image to Docker Hub under repository salahtarek/bd-a1:latest.

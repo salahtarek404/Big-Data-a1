@@ -10,10 +10,10 @@
 
 | Member | Role | Core Assignment Responsibilities | Primary Deliverables | Discussion Prep Focus |
 | :--- | :--- | :--- | :--- | :--- |
-| **Member 1** | **Docker & DevOps Lead** | Docker environment setup, Dockerfile creation, image building, container port mapping, bind mounts, Docker Hub distribution, lifecycle evidence. | `Dockerfile`, Docker commands in `README.md`, screenshots of container lifecycle, Docker Hub image publication. | Dockerfile layers, image vs container, bind mount vs volume, port mapping `HOST:CONTAINER`, Docker Hub registry. |
-| **Member 2** | **Data Cleaning & Preprocessing Specialist** | Dataset loading, metadata reporting, missing value and duplicate remediation, `loc` and `iloc` (`np.r_`), transformations, sampling methods. | Section 4 in `analysis.ipynb`, `data/dataset.csv`, export of `output/cleaned_data.csv`. | Decision justification for missing values/duplicates, `loc` vs `iloc`, sampling biases, stratified vs cluster sampling. |
-| **Member 3** | **Text Analysis & Feature Engineering Specialist** | Text feature engineering (char/word/unique counts, avg length), correlation matrix & heatmap, text cleaning pipeline (`cleaned_text`), tokenization, word frequency analysis, spam vs ham group comparisons, 5 written insights. | Section 5 in `analysis.ipynb`, `output/figures/correlation_heatmap.png`, `output/figures/word_frequency.png`, `output/figures/group_comparison.png`. | Regex cleaning decisions, stop-word removal impact, tokenization, correlation vs causation, observation-evidence-interpretation logic. |
-| **Member 4** | **Machine Learning & Modeling Specialist** | TF-IDF feature extraction, stratified train/test split, Multinomial Naive Bayes classifier, Bonus model comparison (Logistic Regression), K-Means clustering ($k$ selection & silhouette score), cluster top terms & comparison with labels. | Section 6 & 10 in `analysis.ipynb`, `output/figures/confusion_matrix.png`, `output/model_metrics.txt`, `output/cluster_summary.txt`. | TF-IDF formulation, evaluation metrics (precision/recall/F1 trade-offs), Naive Bayes assumptions, why K-Means is unsupervised, interpreting silhouette scores. |
+| **SalahEldin Mohamed** | **Docker & DevOps Lead** | Docker environment setup, Dockerfile creation, image building, container port mapping, bind mounts, Docker Hub distribution, lifecycle evidence. | `Dockerfile`, Docker commands in `README.md`, screenshots of container lifecycle, Docker Hub image publication. | Dockerfile layers, image vs container, bind mount vs volume, port mapping `HOST:CONTAINER`, Docker Hub registry. |
+| **Peter Safwat** | **Data Cleaning & Preprocessing Specialist** | Dataset loading, metadata reporting, missing value and duplicate remediation, `loc` and `iloc` (`np.r_`), transformations, sampling methods. | Section 4 in `analysis.ipynb`, `data/dataset.csv`, export of `output/cleaned_data.csv`. | Decision justification for missing values/duplicates, `loc` vs `iloc`, sampling biases, stratified vs cluster sampling. |
+| **Abdelrahman Mohamed Hasnin** | **Text Analysis & Feature Engineering Specialist** | Text feature engineering (char/word/unique counts, avg length), correlation matrix & heatmap, text cleaning pipeline (`cleaned_text`), tokenization, word frequency analysis, spam vs ham group comparisons, 5 written insights. | Section 5 in `analysis.ipynb`, `output/figures/correlation_heatmap.png`, `output/figures/word_frequency.png`, `output/figures/group_comparison.png`. | Regex cleaning decisions, stop-word removal impact, tokenization, correlation vs causation, observation-evidence-interpretation logic. |
+| **Kerolos Wagih** | **Machine Learning & Modeling Specialist** | TF-IDF feature extraction, stratified train/test split, Multinomial Naive Bayes classifier, Bonus model comparison (Logistic Regression), K-Means clustering ($k$ selection & silhouette score), cluster top terms & comparison with labels. | Section 6 & 10 in `analysis.ipynb`, `output/figures/confusion_matrix.png`, `output/model_metrics.txt`, `output/cluster_summary.txt`. | TF-IDF formulation, evaluation metrics (precision/recall/F1 trade-offs), Naive Bayes assumptions, why K-Means is unsupervised, interpreting silhouette scores. |
 
 ---
 
@@ -79,8 +79,8 @@ bd-a1/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/bd-a1.git
-cd bd-a1
+git clone https://github.com/salahtarek404/Big-Data-a1.git
+cd Big-Data-a1
 ```
 
 ### 2. Build the Custom Docker Image (Section 3.1)
@@ -135,27 +135,27 @@ docker inspect bd-a1-container
 
 ## ☁️ Docker Hub Distribution (Section 3.5)
 
-### Member 1: Tag and Push Image to Docker Hub
+### Member 1 (SalahEldin Mohamed): Tag and Push Image to Docker Hub
 ```bash
 # Log in to Docker Hub
 docker login
 
 # Tag the local image with your Docker Hub username
-docker tag bd-a1:latest <your-dockerhub-username>/bd-a1:latest
+docker tag bd-a1:latest salahtarek/bd-a1:latest
 
 # Push to Docker Hub
-docker push <your-dockerhub-username>/bd-a1:latest
+docker push salahtarek/bd-a1:latest
 ```
 
 **Published Image Repository:**
-- **Repository:** `docker.io/<your-dockerhub-username>/bd-a1`
+- **Repository:** `docker.io/salahtarek/bd-a1`
 - **Tag:** `latest`
 
 ### Peer Verification (Another Team Member)
 Another team member must pull and run the published image to confirm zero-configuration reproducibility:
 ```bash
-docker pull <your-dockerhub-username>/bd-a1:latest
-docker run -it --rm -p 8888:8888 -v "${PWD}/output:/home/jovyan/work/output" <your-dockerhub-username>/bd-a1:latest
+docker pull salahtarek/bd-a1:latest
+docker run -it --rm -p 8888:8888 -v "${PWD}/output:/home/jovyan/work/output" salahtarek/bd-a1:latest
 ```
 
 ---
