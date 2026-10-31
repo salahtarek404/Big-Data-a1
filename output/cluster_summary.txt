@@ -1,0 +1,33 @@
+===================================================
+K-MEANS CLUSTERING SUMMARY (CSCI461 A1)
+===================================================
+Number of Clusters (k): 4
+Silhouette Score      : 0.0279
+
+Cluster Sizes:
+cluster
+0     355
+1    4215
+2     177
+3     422
+
+Top Terms per Cluster:
+Cluster 0: im, home, going, gonna, want, sorry, ill, just
+Cluster 1: just, ur, ok, dont, know, come, like, good
+Cluster 2: ltgt, like, min, minutes, ill, mins, know, pay
+Cluster 3: got, lor, home, wat, ok, come, wan, time
+
+Cluster vs Ground Truth Labels:
+label     ham  spam
+cluster            
+0         347     8
+1        3573   642
+2         177     0
+3         419     3
+
+Interpretation:
+K-Means is unsupervised - it groups messages by TF-IDF similarity
+without seeing labels. Clusters reflect vocabulary patterns
+(e.g. promotional spam language vs casual conversation).
+Cluster IDs do not equal class IDs.
+===================================================
